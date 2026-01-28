@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeno Benjamim - Institucional</title>
+    <style>
+        /* CONFIGURAÇÕES DE CORES E FONTES */
+        :root {
+            --cor-primaria: #0056b3;    /* Azul Institucional */
+            --cor-secundaria: #ffcc00;  /* Amarelo para botões de ação */
+            --cor-texto: #333;
+            --cor-fundo: #ffffff;
+            --cor-suave: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 70px; /* Tamanho ajustado para não ficar exagerado */
+            width: auto;
+            display: block;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--cor-primaria);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--cor-texto);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-primaria);
+        }
+
+        .btn-doe {
+            background: var(--cor-secundaria);
+            padding: 12px 25px;
+            border-radius: 30px;
+            color: #000 !important;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* BANNER PRINCIPAL (HERO) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        /* SEÇÃO DE PROJETOS (CARDS) */
+        .container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .secao-titulo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .secao-titulo h2 {
+            font-size: 2.5rem;
+            color: var(--cor-primaria);
+        }
+
+        .grid-projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-bottom: 5px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 5px solid var(--cor-primaria);
+        }
+
+        .card-info {
+            padding: 25px;
+        }
+
+        .card-info h3 {
+            margin-bottom: 15px;
+            color: var(--cor-primaria);
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        /* RESPONSIVIDADE PARA TELEMÓVEIS */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 5px 10px; font-size: 0.9rem; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://lh3.googleusercontent.com/d/1zusZpwD2pTUpB-1UK3P6NJBs_MUh11du" 
+             alt="Logo Pequeno Benjamim">
+    </div>
+    <nav>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#projetos">O Que Fazemos</a>
+        <a href="#transparencia">Transparência</a>
+        <a href="#contato">Contato</a>
+        <a href="#" class="btn-doe">DOE AGORA</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Transformando o Futuro</h1>
+    <p>Apoie o Pequeno Benjamim na missão de garantir direitos e dignidade para as nossas crianças.</p>
+    <a href="#" style="background: transparent; border: 2px solid #fff; color: #fff; padding: 10px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+        CONHEÇA NOSSA HISTÓRIA
+    </a>
+</section>
+
+<main class="container" id="projetos">
+    <div class="secao-titulo">
+        <h2>Nossas Frentes de Atuação</h2>
+        <p>Iniciativas que geram impacto real na vida de quem mais precisa.</p>
+    </div>
+
+    <div class="grid-projetos">
+        <div class="card">
+            <div class="card-info">
+                <h3>Educação Infantil</h3>
+                <p>Projetos focados no desenvolvimento cognitivo e social, preparando a base para um futuro brilhante.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <h3>Proteção e Direitos</h3>
+                <p>Atuamos na defesa intransigente dos direitos da criança, combatendo situações de vulnerabilidade.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-info">
+                <h3>Saúde e Bem-estar</h3>
+                <p>Ações de nutrição e acompanhamento para garantir que cada criança cresça forte e saudável.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p><strong>Associação Pequeno Benjamim</strong></p>
+    <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
+        &copy; 2025 - Todos os direitos reservados. Inspirado na estrutura FADC.
+    </p>
+</footer>
+
+</body>
+</html>
